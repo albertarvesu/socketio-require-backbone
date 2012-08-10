@@ -9,49 +9,6 @@
   <script src="/socket.io/socket.io.js"></script>
   <script type="text/javascript" data-main="js/main" src="js/lib/require.js"></script>
    <link href="css/skin.css" rel="stylesheet" type="text/css" />
-   <script type="text/javascript">
-    var CONTACTS = [
-        { name: "Contact 1", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", email: "anemail@me.com", type: "family" },
-        { name: "Contact 2", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", email: "anemail@me.com", type: "family" },
-        { name: "Contact 3", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", email: "anemail@me.com", type: "friend" },
-        { name: "Contact 4", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", email: "anemail@me.com", type: "colleague" },
-        { name: "Contact 5", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", email: "anemail@me.com", type: "family" },
-        { name: "Contact 6", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", email: "anemail@me.com", type: "colleague" },
-        { name: "Contact 7", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", email: "anemail@me.com", type: "friend" },
-        { name: "Contact 8", address: "1, a street, a town, a city, AB12 3CD", tel: "0123456789", email: "anemail@me.com", type: "family" }
-    ];
-   </script>
-<!--
-<script>
-  var socket = io.connect('http://localhost:4000');
-
-  socket.on('news', function (data) {
-  
-      console.log(JSON.stringify(data));
-      socket.emit('connectEvent', { my: 'data' });
-
-      $("#target").text(data["hello"]);
-  });
-
-
-// broadcast reception
- socket.on('helloeveryone', function (data) {
-     
-   console.log(JSON.stringify(data));
-
-   $("#everyone").append(data["broadcastMessage"]+"<br>");
-  
- });
-
-// call the server
- function sendBroadcast() {
-   var msg = $("#inputBox").val();
-   socket.emit('helloeveryone', { broadcastMessage: msg });
- }
-
-
-</script>
--->
 
         <style>
             body {
@@ -66,49 +23,10 @@
 
     <body>
         <div class="container">
-<!--
-            <table class="table table-bordered table-striped table-condensed">
-
-              <thead>
-
-                <tr>
-                  <th rowspan='2'>TIME</th>
-                  <th rowspan='2'>GAME</th>
-                  <th colspan='4'>HDP</th>
-                  <th colspan='4'>TOTALS</th>
-                </tr>
-
-                <tr>
-                  <th>IBCbet</th>
-                  <th>Samvo</th>
-                  <th>sbobet</th>
-                  <th>singbt</th>
-
-                  <th>IBCbet</th>
-                  <th>Samvo</th>
-                  <th>sbobet</th>
-                  <th>singbt</th>
-
-                </tr>
-              </thead>
-
-              <tbody id="tbody"></tbody>
-
-            </table>
--->
-            <ul id="contacts">
+			<ul id="contacts">
 
             </ul>
-
         </div>
-<!--
-    <h1>Simple Chat with node.js and socket.io</h1>
-    <div id="target">welcome</div>   
-
-  <input type="text" name="inputBox" id="inputBox" />
-  <button onclick="JavaScript:sendBroadcast()">send!</button> <br />
-  <div id="everyone"></div>
--->
     </body>
 
 </html>

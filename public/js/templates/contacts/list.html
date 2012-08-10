@@ -1,0 +1,13 @@
+<%
+var attr;
+_.each(models, function onEachModel(user) {
+	attr = user.attributes;
+	%>
+		<li>
+			<span><%= attr.uuid %></span>
+			<span><%= attr.name %></span>
+			<span><%= attr.age %></span>
+		</li>
+	<%
+});
+%>

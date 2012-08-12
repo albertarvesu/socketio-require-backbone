@@ -4,11 +4,12 @@ define([
 	'backbone'
 	],
 	function($, _, Backbone) {
-		var contact = Backbone.Model.extend({
+		var user = Backbone.Model.extend({
 			defaults: {
-				name: "name",
-				age: 1
+				name: "unknown",
+				age: "unknown",
+				location: "undefined"
 			}
 		});
-		return contact;
+		return user;
 	});

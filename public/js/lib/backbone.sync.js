@@ -6,6 +6,7 @@ define([
     ],
     function($, _, Backbone, io) {
         Backbone.sync = function (method, model, options) {
+            //console.log(arguments);
             var socket = io; // grab active socket from global namespace; io.connect() was used to create socket
          
             /*
@@ -47,15 +48,12 @@ define([
          
             // Get a collection or model from the server.
             var read = function () {
-                console.log("sync read");
                 var sign = signature(model);
                 var e = event('read', sign);
                 socket.emit('read', {'signature' : sign});  
                 socket.once(e, function (data) {
-                    //console.log(data);
-                    //options.success(JSON.parse(data)); // updates collection, model; fetch   
-                    console.log(model);                   
-                    model.reset(JSON.parse(data));
+                    options.success(data); // updates collection, model; fetch                     
+                    //model.reset(data);
                 });   
             }; 
              

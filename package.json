@@ -4,7 +4,7 @@
   "dependencies": {
     "socket.io": "0.9.x",
 	 "node-static":"0.6.0",
-	 "express": "3.0.x"
+	 "express": "4.17.x"
   },
   "engines": {
     "node": "0.6.x"
